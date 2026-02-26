@@ -394,7 +394,7 @@
             data.alergias = alergias.join(', ');
 
             data.otras_alergias = document.getElementById('otras_alergias').value;
-            data.bus = document.querySelector('input[name="bus"]:checked');
+            data.bus = document.querySelector('input[name="bus"]:checked').value;
 
             console.log("data: " + JSON.stringify(data));
             
