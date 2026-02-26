@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuestionario Boda - Carmen & Pablo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f0f8ff 0%, #e6f0fa 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+        }
+
+        /* Logo */
+        .logo {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .logo h1 {
+            font-size: 4em;
+            color: #2c3e50;
+            font-family: 'Allura', cursive;
+            font-weight: 400;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+        }
+
+        .logo span {
+            font-size: 1.1em;
+            color: #5d7a9a;
+            display: block;
+            margin-top: 5px;
+            font-style: italic;
+            font-family: 'Georgia', serif;
+            letter-spacing: 1px;
+        }
+
+        .logo-decoration {
+            width: 100px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #a0c0e0, transparent);
+            margin: 15px auto;
+        }
+
+        /* Formulario */
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #2c3e50;
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #d4e3f0;
+            border-radius: 8px;
+            font-size: 1em;
+            transition: all 0.3s ease;
+            background-color: #fafcff;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #7a9bcb;
+            box-shadow: 0 0 0 3px rgba(122, 155, 203, 0.1);
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .radio-option {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .radio-option input[type="radio"] {
+            width: auto;
+            margin-right: 5px;
+            accent-color: #7a9bcb;
+        }
+
+        .checkbox-group {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .checkbox-item input[type="checkbox"] {
+            width: auto;
+            accent-color: #7a9bcb;
+        }
+
+        /* Secciones */
+        .section-title {
+            font-size: 1.3em;
+            color: #2c3e50;
+            margin: 35px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #d4e3f0;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        .section-title:first-of-type {
+            margin-top: 0;
+        }
+
+        /* Botón enviar */
+        .submit-btn {
+            background: #7a9bcb;
+            color: white;
+            border: none;
+            padding: 16px 40px;
+            font-size: 1.2em;
+            border-radius: 50px;
+            cursor: pointer;
+            width: 100%;
+            font-weight: 500;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            margin-top: 30px;
+            box-shadow: 0 4px 15px rgba(122, 155, 203, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .submit-btn:hover {
+            background: #6384b4;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(122, 155, 203, 0.4);
+        }
+
+        /* Mensaje de confirmación */
+        .success-message {
+            background: #2c3e50;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 20px;
+            display: none;
+            font-weight: 500;
+        }
+
+        /* Estilos para campos obligatorios */
+        .required::after {
+            content: " *";
+            color: #7a9bcb;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .container {
+                padding: 25px;
+            }
+            
+            .logo h1 {
+                font-size: 3em;
+            }
+            
+            .radio-group {
+                gap: 15px;
+            }
+        }
+
+        /* Estilos adicionales */
+        .subtle-text {
+            color: #5d7a9a;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+
+        select {
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237a9bcb' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 15px center;
+            background-size: 15px;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Logo -->
+        <div class="logo">
+            <h1>Carmen & Pablo</h1>
+            <div class="logo-decoration"></div>
+            <span>CUESTIONARIO DE ASISTENCIA</span>
+        </div>
+
+        <!-- Formulario -->
+        <form id="weddingForm">
+            <!-- Datos personales -->
+            <div class="section-title">Información personal</div>
+            
+            <div class="form-group">
+                <label for="nombre" class="required">Nombre y apellidos</label>
+                <input type="text" id="nombre" name="nombre" required placeholder="Ej: María García López">
+            </div>
+
+            <div class="form-group">
+                <label for="email" class="required">Correo electrónico</label>
+                <input type="email" id="email" name="email" required placeholder="tucorreo@ejemplo.com">
+            </div>
+
+            <div class="form-group">
+                <label for="telefono">Teléfono de contacto</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="666 777 888">
+                <div class="subtle-text">Para cualquier comunicación de última hora</div>
+            </div>
+
+            <!-- Confirmación asistencia -->
+            <div class="section-title">Confirmación de asistencia</div>
+            
+            <div class="form-group">
+                <label class="required">¿Asistirá a la celebración?</label>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" id="asiste_si" name="asistencia" value="si" required>
+                        <label for="asiste_si">Sí, confirmo mi asistencia</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="asiste_no" name="asistencia" value="no" required>
+                        <label for="asiste_no">Lamentablemente no podré asistir</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="num_asistentes">Número de asistentes</label>
+                <select name="num_asistentes" id="num_asistentes">
+                    <option value="1">1 persona</option>
+                    <option value="2">2 personas</option>
+                    <option value="3">3 personas</option>
+                    <option value="4">4 personas</option>
+                    <option value="5">5 personas</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Acompañantes (si procede)</label>
+                <input type="text" id="acompanantes" name="acompanantes" placeholder="Nombres de los acompañantes">
+            </div>
+
+            <!-- Alergias e intolerancias -->
+            <div class="section-title">Preferencias alimentarias</div>
+            
+            <div class="form-group">
+                <label>Alergias o intolerancias</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="sin_gluten" name="alergias" value="Sin gluten">
+                        <label for="sin_gluten">Sin gluten</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="sin_lactosa" name="alergias" value="Sin lactosa">
+                        <label for="sin_lactosa">Sin lactosa</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="frutos_secos" name="alergias" value="Alergia frutos secos">
+                        <label for="frutos_secos">Alergia a frutos secos</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="mariscos" name="alergias" value="Alergia mariscos">
+                        <label for="mariscos">Alergia a mariscos</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="otras_alergias">Otras indicaciones</label>
+                <textarea id="otras_alergias" name="otras_alergias" rows="3" placeholder="Por favor, indique cualquier otra alergia, intolerancia o preferencia alimentaria (vegetariano, vegano, etc.)"></textarea>
+            </div>
+
+            <!-- Transporte -->
+            <div class="section-title">Transporte</div>
+            
+            <div class="form-group">
+                <label>¿Utilizará el servicio de autobús?</label>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" id="bus_si" name="bus" value="si">
+                        <label for="bus_si">Sí, ida y vuelta</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="bus_solo_ida" name="bus" value="solo_ida">
+                        <label for="bus_solo_ida">Solo ida</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="bus_solo_vuelta" name="bus" value="solo_vuelta">
+                        <label for="bus_solo_vuelta">Solo vuelta</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="bus_no" name="bus" value="no">
+                        <label for="bus_no">No, iré por cuenta propia</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Menú de alergias adicional (solo visible si hay acompañantes) -->
+            <div class="section-title" id="alergiasAcompanantesTitle" style="display: none;">Alergias de acompañantes</div>
+            <div id="alergiasAcompanantesContainer"></div>
+
+            <!-- Botón enviar -->
+            <button type="submit" class="submit-btn">Enviar confirmación</button>
+            
+            <div class="success-message" id="successMessage">
+                Gracias por confirmar su asistencia.
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Validación personalizada
+        const form = document.getElementById('weddingForm');
+        form.addEventListener('submit', function(event) {
+            const nombre = document.getElementById('nombre').value;
+            const email = document.getElementById('email').value;
+            const asistencia = document.querySelector('input[name="asistencia"]:checked');
+            
+            if (!nombre || !email || !asistencia) {
+                event.preventDefault();
+                alert('Por favor, complete los campos obligatorios: nombre, email y asistencia.');
+            }
+        });
+
+        // Script para Google Sheets (comentado - listo para usar)
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwNWzEyX_QbhAnSZr1SGlASsAQmuhL13fFVFY32fEIMI2QeG2-EsAfAupEPWALHOGyh/exec';
+        
+        document.getElementById('weddingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Recoger todos los datos del formulario
+            const formData = new FormData(this);
+            const data = {};
+
+            data.nombre = document.getElementById('nombre').value;
+            data.email = document.getElementById('email').value;
+            data.telefono = document.getElementById('telefono').value;
+            data.asistencia = document.querySelector('input[name="asistencia"]:checked');
+            data.num_asistentes = document.getElementById('num_asistentes').value;
+            data.acompanantes = document.getElementById('acompanantes').value;
+
+            
+            // Procesar checkboxes (alergias)
+            const alergias = [];
+            document.querySelectorAll('input[name="alergias"]:checked').forEach(checkbox => {
+                alergias.push(checkbox.value);
+            });
+            
+            // Construir objeto con todos los datos
+            for (let [key, value] of formData.entries()) {
+                if (key !== 'alergias') {
+                    data[key] = value;
+                }
+            }
+            
+            // Añadir alergias como string
+            data.alergias = alergias.join(', ');
+
+            data.otras_alergias = document.getElementById('otras_alergias').value;
+            data.bus = document.querySelector('input[name="bus"]:checked');
+
+            console.log("data: " + JSON.stringify(data));
+            
+            // Mostrar mensaje de carga
+            const submitBtn = document.querySelector('.submit-btn');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Enviando...';
+            submitBtn.disabled = true;
+            
+            // Enviar a Google Sheets
+            fetch(scriptURL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data)
+            })
+            .then(() => {
+                // Con no-cors no podemos leer la respuesta, asumimos éxito
+                document.getElementById('successMessage').style.display = 'block';
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+                
+                // Ocultar mensaje después de 5 segundos
+                setTimeout(() => {
+                    document.getElementById('successMessage').style.display = 'none';
+                }, 5000);
+            })
+            .catch(error => {
+                alert('Error al enviar. Por favor, inténtelo de nuevo.');
+                console.error('Error:', error);
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            });
+        });
+    </script>
+</body>
+</html>
