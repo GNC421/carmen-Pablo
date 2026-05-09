@@ -9,7 +9,6 @@
 /* Components */
 @import url('components/loading.css');
 @import url('components/envelope.css');
-@import url('components/flying-paper.css');
 
 /* Layout */
 @import url('layout/container.css');
@@ -26,7 +25,6 @@
 @import url('forms/inputs.css');
 @import url('forms/radios.css');
 @import url('forms/checkboxes.css');
-@import url('forms/select.css');
 
 /* Utils */
 @import url('utils/buttons.css');
