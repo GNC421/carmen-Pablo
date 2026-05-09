@@ -2,10 +2,12 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cuestionario Boda - Carmen & Pablo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Invitación Boda - Carmen & Pablo</title>
     <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/envelope-start.css">
 </head>
 <body>
     <!-- Pantalla de carga inicial -->
@@ -18,134 +20,131 @@
         </div>
     </div>
 
-    <!-- Animación del sobre y papel volador -->
+    <!-- Animación del sobre -->
     <div class="invitation-stage" id="invitationStage">
-        <!-- Sobre -->
         <div class="envelope-wrapper" id="envelopeWrapper">
             <div class="envelope">
                 <div class="envelope-flap"></div>
                 <div class="envelope-body">
+                    <!-- Líneas decorativas del sobre -->
+                    <div class="envelope-lines">
+                        <div class="line-left"></div>
+                        <div class="line-right"></div>
+                    </div>
+                    <!-- Sello de correo -->
+                    <div class="envelope-stamp">
+                        <span>✉️</span>
+                        <span>CORREOS</span>
+                    </div>
+                    <!-- Dirección -->
                     <div class="envelope-address">
                         <h3>Carmen & Pablo</h3>
                         <p>Nos casamos</p>
                     </div>
+                    <!-- Sello rojo -->
                     <div class="envelope-seal"></div>
                 </div>
                 <button class="open-btn" id="openBtn">Abrir invitación</button>
             </div>
         </div>
-
-        <!-- Papel que vuela (se anima desde el sobre al centro) -->
-        <div class="flying-paper" id="flyingPaper">
-            <div class="paper-inner">
-                <div class="paper-content">
-                    <h2>Carmen & Pablo</h2>
-                    <div class="paper-decoration"></div>
-                    <p class="paper-greeting">Queridos familiares y amigos,</p>
-                    <p>Nos llena de alegría invitaros a compartir el día más importante de nuestras vidas.</p>
-                    <div class="paper-details">
-                        <div class="paper-detail">📅 26 de septiembre de 2026</div>
-                        <div class="paper-detail">⛪ Ceremonia: 12:00h - Iglesia de San Juan Evangelista</div>
-                        <div class="paper-detail">🎉 Celebración: 14:30h - Magna de La Quinta</div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 
-    <!-- Contenido principal (cuestionario) - se revela cuando el papel se abre -->
+    <!-- Contenido principal -->
     <div class="main-content" id="mainContent">
-        <div class="container">
-            <!-- Logo y introducción -->
-            <div class="logo">
+        
+        <!-- HERO SECTION - INTRODUCCIÓN -->
+        <div class="hero-section">
+            <div class="hero-card">
                 <h1>Carmen & Pablo</h1>
-                <div class="logo-decoration"></div>
-                <span>¡Nos casamos!</span>
-                <div class="intro-text">
-                Somos Carmen y Pablo, y con este cuestionario nos vais a ayudar a que en septiembre todo
-                salga perfecto como nuestro “sí, quiero”. Gracias por echarnos una mano para que podamos
-                disfrutar con vosotros de un día maravilloso, divertido y lleno de momentazos para recordar…
-                ¡y bailar hasta que nos duelan los pies!
-                </div>
+                <div class="hero-decoration"></div>
+                <p class="hero-date">26 de septiembre de 2026</p>
+                <p class="hero-text">
+                    Somos Carmen y Pablo, y con este cuestionario nos vais a ayudar a que en septiembre todo
+                    salga perfecto como nuestro "sí, quiero". Gracias por echarnos una mano para que podamos
+                    disfrutar con vosotros de un día maravilloso, divertido y lleno de momentazos para recordar…
+                    ¡y bailar hasta que nos duelan los pies!
+                </p>
             </div>
+        </div>
 
-            <!-- Formulario principal -->
+        <!-- FORMULARIO PRINCIPAL -->
+        <div class="mkdf-container">
             <form id="weddingForm">
-                <!-- CARD 1: Ceremonia + Información personal -->
-                <div class="card">
-                    <div class="card-header">
-                        <h2>
-                            <span>📋</span>
-                            Información personal y ceremonia
-                        </h2>
-                        <span class="toggle-icon">▼</span>
-                    </div>
-                    <div class="card-content">
-                        <div class="card-inner">
-                            <div class="info-box">
-                                <p><strong>📍 Ceremonia</strong></p>
-                            <p>La gran cita será en Blanca, nuestro querido pueblo, en la Iglesia San Juan Evangelista, a las
-                            12:00h en punto (sí, en punto… que luego llegan las novias nerviosas y los novios sudando).</p>
-                            <br>
-                            <a href="https://maps.google.com/maps/place//data=!4m2!3m1!1s0xd646fd2f205a43d:0xbd71f862aa184d30?entry=s&amp;sa=X&amp;ved=2ahUKEwjpv8SYi_eSAxVc_rsIHeBALJwQ4kB6BAgZEAA&amp;hl=es"
-                            target="_blank">Ver ubicación en Google Maps →</a>
+                
+                <!-- SECCIÓN 1: Ceremonia - Imagen derecha -->
+                <div class="mkdf-row mkdf-row-ceremony">
+                    <div class="mkdf-col mkdf-col-content">
+                        <div class="section-header">
+                            <div class="section-icon">📋</div>
+                            <div>
+                                <h2 class="mkdf-title">Información personal</h2>
+                                <p class="mkdf-subtitle">Datos para contactarte</p>
                             </div>
-
-                            <div class="form-group">
-                                <label for="nombre" class="required">Nombre y apellidos</label>
-                                <input type="text" id="nombre" name="nombre" required placeholder="Ej: María García López">
+                        </div>
+                        <div class="mkdf-info-box">
+                            <div class="mkdf-info-icon">📍</div>
+                            <div>
+                                <h4>Ceremonia</h4>
+                                <p>La gran cita será en Blanca, nuestro querido pueblo, en la Iglesia San Juan Evangelista, a las 12:00h en punto (sí, en punto… que luego llegan las novias nerviosas y los novios sudando).</p>
+                                <a href="https://maps.google.com/maps/place//data=!4m2!3m1!1s0xd646fd2f205a43d:0xbd71f862aa184d30" target="_blank" class="mkdf-link">Ver en mapa →</a>
                             </div>
-
-                            <div class="form-group">
-                                <label for="email" class="required">Correo electrónico</label>
+                        </div>
+                        <div class="mkdf-form-group">
+                            <div class="mkdf-field">
+                                <label>Nombre y apellidos <span class="required">*</span></label>
+                                <input type="text" id="nombre" name="nombre" required placeholder="María García López">
+                            </div>
+                            <div class="mkdf-field">
+                                <label>Correo electrónico <span class="required">*</span></label>
                                 <input type="email" id="email" name="email" required placeholder="tucorreo@ejemplo.com">
                             </div>
-
-                            <div class="form-group">
-                                <label for="telefono">Teléfono de contacto</label>
+                            <div class="mkdf-field">
+                                <label>Teléfono de contacto</label>
                                 <input type="tel" id="telefono" name="telefono" placeholder="666 777 888">
-                                <div class="subtle-text">Para cualquier comunicación de última hora</div>
+                                <span class="field-hint">Para cualquier comunicación de última hora</span>
                             </div>
                         </div>
                     </div>
+                    <div class="mkdf-col mkdf-col-image mkdf-image-ceremony"></div>
                 </div>
 
-                <!-- CARD 2: Celebración + Confirmación asistencia -->
-                <div class="card">
-                    <div class="card-header">
-                        <h2>
-                            <span>🎉</span>
-                            Celebración y confirmación
-                        </h2>
-                        <span class="toggle-icon">▼</span>
-                    </div>
-                    <div class="card-content">
-                        <div class="card-inner">
-                            <div class="info-box">
-                                <p><strong>🎊 Celebración</strong></p>
-                            <p>Para seguir celebrando como se merece, nos vemos sobre las 14:30 en el restaurante Magna de La Quinta</p>
-                            <br>
-                            <a href="https://maps.google.com/maps/place//data=!4m2!3m1!1s0xd638705163ec745:0x80b5789641970a1e?entry=s&amp;sa=X&amp;ved=2ahUKEwju5dGwi_eSAxUG8LsIHWEIHS4Q4kB6BAgaEAA&amp;hl=es"
-                            target="_blank">Ver ubicación en Google Maps →</a>
+                <!-- SECCIÓN 2: Celebración - Imagen izquierda -->
+                <div class="mkdf-row mkdf-row-celebration mkdf-row-reverse">
+                    <div class="mkdf-col mkdf-col-content">
+                        <div class="section-header">
+                            <div class="section-icon">🎉</div>
+                            <div>
+                                <h2 class="mkdf-title">Confirmación de asistencia</h2>
+                                <p class="mkdf-subtitle">Cuéntanos si podrás venir</p>
                             </div>
-
-                            <div class="form-group">
-                                <label class="required">¿Asistirá a la celebración?</label>
-                                <div class="radio-group">
-                                    <div class="radio-option">
-                                        <input type="radio" id="asiste_si" name="asistencia" value="si" required>
-                                        <label for="asiste_si">Sí, confirmo mi asistencia</label>
-                                    </div>
-                                    <div class="radio-option">
-                                        <input type="radio" id="asiste_no" name="asistencia" value="no" required>
-                                        <label for="asiste_no">Lamentablemente no podré asistir</label>
-                                    </div>
-                                </div>
+                        </div>
+                        <div class="mkdf-info-box">
+                            <div class="mkdf-info-icon">🎊</div>
+                            <div>
+                                <h4>Celebración</h4>
+                                <p>Para seguir celebrando como se merece, nos vemos sobre las 14:30 en el restaurante Magna de La Quinta.</p>
+                                <a href="https://maps.google.com/maps/place//data=!4m2!3m1!1s0xd638705163ec745:0x80b5789641970a1e" target="_blank" class="mkdf-link">Ver en mapa →</a>
                             </div>
-
-                            <div class="form-group">
-                                <label for="num_asistentes">Número de asistentes</label>
-                                <select name="num_asistentes" id="num_asistentes">
+                        </div>
+                        <div class="mkdf-radio-group">
+                            <span class="mkdf-radio-label">¿Asistirás a la celebración?</span>
+                            <div class="mkdf-radio-options">
+                                <label class="mkdf-radio">
+                                    <input type="radio" name="asistencia" value="si" required>
+                                    <span class="mkdf-radio-check"></span>
+                                    Sí, confirmo mi asistencia
+                                </label>
+                                <label class="mkdf-radio">
+                                    <input type="radio" name="asistencia" value="no" required>
+                                    <span class="mkdf-radio-check"></span>
+                                    Lamentablemente no podré asistir
+                                </label>
+                            </div>
+                        </div>
+                        <div class="mkdf-form-grid mkdf-grid-2">
+                            <div class="mkdf-field">
+                                <label>Número de asistentes</label>
+                                <select id="num_asistentes" name="num_asistentes">
                                     <option value="1">1 persona</option>
                                     <option value="2">2 personas</option>
                                     <option value="3">3 personas</option>
@@ -153,116 +152,121 @@
                                     <option value="5">5 personas</option>
                                 </select>
                             </div>
-
-                            <div class="form-group">
-                                <label for="acompanantes">Acompañantes (si procede)</label>
+                            <div class="mkdf-field">
+                                <label>Acompañantes</label>
                                 <input type="text" id="acompanantes" name="acompanantes" placeholder="Nombres de los acompañantes">
                             </div>
                         </div>
                     </div>
+                    <div class="mkdf-col mkdf-col-image mkdf-image-celebration"></div>
                 </div>
 
-                <!-- CARD 3: Menús especiales + Alergias -->
-                <div class="card">
-                    <div class="card-header">
-                        <h2>
-                            <span>🍽️</span>
-                            Preferencias alimentarias
-                        </h2>
-                        <span class="toggle-icon">▼</span>
+                <!-- SECCIÓN 3: Alimentación - Imagen derecha -->
+                <div class="mkdf-row mkdf-row-food">
+                    <div class="mkdf-col mkdf-col-content">
+                        <div class="section-header">
+                            <div class="section-icon">🍽️</div>
+                            <div>
+                                <h2 class="mkdf-title">Preferencias alimentarias</h2>
+                                <p class="mkdf-subtitle">Cuéntanos tus necesidades</p>
+                            </div>
+                        </div>
+                        <div class="mkdf-info-box">
+                            <div>
+                                <h4>Menú especial</h4>
+                                <p>Si tienes alguna intolerancia alimentaria, este es el momento de confesarla sin miedo ni vergüenza.</p>
+                            </div>
+                        </div>
+                        <div class="mkdf-checkbox-group">
+                            <span class="mkdf-checkbox-label">Alergias o intolerancias</span>
+                            <div class="mkdf-checkbox-options">
+                                <label class="mkdf-checkbox">
+                                    <input type="checkbox" name="alergias" value="Sin gluten">
+                                    <span class="mkdf-checkbox-check"></span>
+                                    Sin gluten
+                                </label>
+                                <label class="mkdf-checkbox">
+                                    <input type="checkbox" name="alergias" value="Sin lactosa">
+                                    <span class="mkdf-checkbox-check"></span>
+                                    Sin lactosa
+                                </label>
+                                <label class="mkdf-checkbox">
+                                    <input type="checkbox" name="alergias" value="Alergia frutos secos">
+                                    <span class="mkdf-checkbox-check"></span>
+                                    Frutos secos
+                                </label>
+                                <label class="mkdf-checkbox">
+                                    <input type="checkbox" name="alergias" value="Alergia mariscos">
+                                    <span class="mkdf-checkbox-check"></span>
+                                    Mariscos
+                                </label>
+                            </div>
+                        </div>
+                        <div class="mkdf-field">
+                            <label>Otras indicaciones</label>
+                            <textarea id="otras_alergias" name="otras_alergias" rows="3" placeholder="Vegetariano, vegano, u otras alergias..."></textarea>
+                        </div>
                     </div>
-                    <div class="card-content">
-                        <div class="card-inner">
-                            <div class="info-box">
-                                <p><strong>🥗 Menú especial</strong></p>
-                            <p>Si tienes alguna intolerancia alimentaria, este es el momento de confesarla sin miedo ni
-                            vergüenza. Cuéntanos qué alimentos debemos mantener lejos de tu plato para que la única
-                            explosión del evento sea de sabor… y no de emergencia.</p>
-                            </div>
+                    <div class="mkdf-col mkdf-col-image mkdf-image-food"></div>
+                </div>
 
-                            <div class="form-group">
-                                <label>Alergias o intolerancias</label>
-                                <div class="checkbox-group">
-                                    <div class="checkbox-item">
-                                        <input type="checkbox" id="sin_gluten" name="alergias" value="Sin gluten">
-                                        <label for="sin_gluten">Sin gluten</label>
-                                    </div>
-                                    <div class="checkbox-item">
-                                        <input type="checkbox" id="sin_lactosa" name="alergias" value="Sin lactosa">
-                                        <label for="sin_lactosa">Sin lactosa</label>
-                                    </div>
-                                    <div class="checkbox-item">
-                                        <input type="checkbox" id="frutos_secos" name="alergias" value="Alergia frutos secos">
-                                        <label for="frutos_secos">Alergia a frutos secos</label>
-                                    </div>
-                                    <div class="checkbox-item">
-                                        <input type="checkbox" id="mariscos" name="alergias" value="Alergia mariscos">
-                                        <label for="mariscos">Alergia a mariscos</label>
-                                    </div>
-                                </div>
+                <!-- SECCIÓN 4: Transporte - Imagen izquierda -->
+                <div class="mkdf-row mkdf-row-transport mkdf-row-reverse">
+                    <div class="mkdf-col mkdf-col-content">
+                        <div class="section-header">
+                            <div class="section-icon">🚌</div>
+                            <div>
+                                <h2 class="mkdf-title">Servicio de autobuses</h2>
+                                <p class="mkdf-subtitle">Viaja sin preocupaciones</p>
                             </div>
-
-                            <div class="form-group">
-                                <label for="otras_alergias">Otras indicaciones</label>
-                                <textarea id="otras_alergias" name="otras_alergias" rows="3" placeholder="Por favor, indique cualquier otra alergia, intolerancia o preferencia alimentaria (vegetariano, vegano, etc.)"></textarea>
+                        </div>
+                        <div class="mkdf-info-box">
+                            <div>
+                                <h4>Transporte gratuito</h4>
+                                <p>Queremos que solamente os preocupéis de disfrutar y pasar un día que recordéis siempre, así que para que nadie tenga que pensar en el coche ni en “¿quién conduce?”, tendréis servicio de autobuses en distintos momentos del día. Vosotros ponéis las ganas… ¡nosotros ponemos las ruedas La salida desde La Farola tendrá lugar a las 14:00</p>
+                                <a href="https://share.google/sEwCuu2mouiXkGmIl" target="_blank" class="mkdf-link">Ver punto de encuentro →</a>
+                            </div>
+                        </div>
+                        <div class="mkdf-radio-group">
+                            <span class="mkdf-radio-label">¿Utilizarás el servicio de autobús?</span>
+                            <div class="mkdf-radio-options mkdf-grid-2">
+                                <label class="mkdf-radio">
+                                    <input type="radio" name="bus" value="si">
+                                    <span class="mkdf-radio-check"></span>
+                                    Sí, ida y vuelta
+                                </label>
+                                <label class="mkdf-radio">
+                                    <input type="radio" name="bus" value="solo_ida">
+                                    <span class="mkdf-radio-check"></span>
+                                    Solo ida
+                                </label>
+                                <label class="mkdf-radio">
+                                    <input type="radio" name="bus" value="solo_vuelta">
+                                    <span class="mkdf-radio-check"></span>
+                                    Solo vuelta
+                                </label>
+                                <label class="mkdf-radio">
+                                    <input type="radio" name="bus" value="no">
+                                    <span class="mkdf-radio-check"></span>
+                                    No, iré por cuenta propia
+                                </label>
                             </div>
                         </div>
                     </div>
+                    <div class="mkdf-col mkdf-col-image mkdf-image-transport"></div>
                 </div>
 
-                <!-- CARD 4: Servicio de autobuses -->
-                <div class="card">
-                    <div class="card-header">
-                        <h2>
-                            <span>🚌</span>
-                            Servicio de autobuses
-                        </h2>
-                        <span class="toggle-icon">▼</span>
-                    </div>
-                    <div class="card-content">
-                        <div class="card-inner">
-                            <div class="info-box">
-                                <p><strong>🚍 Transporte</strong></p>
-                            <p>Queremos que solamente os preocupéis de disfrutar y pasar un día que recordéis siempre, así
-                            que para que nadie tenga que pensar en el coche ni en “¿quién conduce?”, tendréis servicio de
-                            autobuses en distintos momentos del día. Vosotros ponéis las ganas… ¡nosotros ponemos las
-                            ruedas
-                            La salida desde La Farola tendrá lugar a las 14:00</p>
-                            <br>
-                            <a href="https://share.google/sEwCuu2mouiXkGmIl"
-                            target="_blank">Ver ubicación en Google Maps →</a>
-                            </div>
+                <!-- BOTÓN ENVIAR -->
+                <button type="submit" class="mkdf-submit-btn">
+                    <span>Enviar confirmación</span>
+                    <span class="btn-icon">→</span>
+                </button>
 
-                            <div class="form-group">
-                                <label>¿Utilizará el servicio de autobús?</label>
-                                <div class="radio-group">
-                                    <div class="radio-option">
-                                        <input type="radio" id="bus_si" name="bus" value="si">
-                                        <label for="bus_si">Sí, ida y vuelta</label>
-                                    </div>
-                                    <div class="radio-option">
-                                        <input type="radio" id="bus_solo_ida" name="bus" value="solo_ida">
-                                        <label for="bus_solo_ida">Solo ida</label>
-                                    </div>
-                                    <div class="radio-option">
-                                        <input type="radio" id="bus_solo_vuelta" name="bus" value="solo_vuelta">
-                                        <label for="bus_solo_vuelta">Solo vuelta</label>
-                                    </div>
-                                    <div class="radio-option">
-                                        <input type="radio" id="bus_no" name="bus" value="no">
-                                        <label for="bus_no">No, iré por cuenta propia</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <!-- MENSAJE DE ÉXITO -->
+                <div class="mkdf-success-message" id="successMessage">
+                    ✨ Gracias por confirmar tu asistencia ✨
                 </div>
 
-                <button type="submit" class="submit-btn">Enviar confirmación</button>
-                
-                <div class="success-message" id="successMessage">
-                    Gracias por confirmar su asistencia.
-                </div>
             </form>
         </div>
     </div>

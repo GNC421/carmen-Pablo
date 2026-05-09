@@ -1,0 +1,15 @@
+/* ========================================
+   CONTENEDOR PRINCIPAL
+   ======================================== */
+
+.mkdf-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 24px 60px;
+}
+
+@media (max-width: 768px) {
+    .mkdf-container {
+        padding: 30px 20px 50px;
+    }
+}

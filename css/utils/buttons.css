@@ -1,0 +1,67 @@
+/* ========================================
+   BOTÓN ENVIAR
+   ======================================== */
+
+.mkdf-submit-btn {
+    width: 100%;
+    padding: 18px 32px;
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    border: none;
+    border-radius: 60px;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.mkdf-submit-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.mkdf-submit-btn:hover::before {
+    left: 100%;
+}
+
+.mkdf-submit-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #2d3a5e, #1e293b);
+}
+
+.btn-icon {
+    transition: transform 0.25s ease;
+    font-size: 1.2em;
+}
+
+.mkdf-submit-btn:hover .btn-icon {
+    transform: translateX(6px);
+}
+
+/* Mensaje de éxito */
+.mkdf-success-message {
+    text-align: center;
+    padding: 18px;
+    margin-top: 28px;
+    background: linear-gradient(135deg, #dcfce7, #bbf7d0);
+    border-radius: 60px;
+    color: #166534;
+    font-weight: 600;
+    display: none;
+    animation: fadeInUp 0.5s ease;
+}

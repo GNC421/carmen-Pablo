@@ -1,0 +1,90 @@
+/* ========================================
+   MEDIA QUERIES - RESPONSIVE
+   ======================================== */
+
+@media (max-width: 1024px) {
+    .mkdf-container {
+        max-width: 95%;
+    }
+}
+
+@media (max-width: 900px) {
+    .mkdf-row {
+        flex-direction: column;
+        margin-bottom: 40px;
+    }
+    .mkdf-row-reverse {
+        flex-direction: column;
+    }
+    .mkdf-col-image {
+        min-height: 280px;
+    }
+    .mkdf-col-content {
+        padding: 32px 28px;
+    }
+}
+
+@media (max-width: 768px) {
+    .mkdf-container {
+        padding: 30px 20px 50px;
+    }
+    
+    .mkdf-title {
+        font-size: 1.5em;
+    }
+    
+    .section-icon {
+        font-size: 2em;
+    }
+    
+    .mkdf-info-box {
+        padding: 16px;
+    }
+}
+
+@media (max-width: 640px) {
+    .mkdf-grid-2 {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .mkdf-radio-options,
+    .mkdf-checkbox-options {
+        flex-direction: column;
+        gap: 14px;
+    }
+    
+    .mkdf-col-content {
+        padding: 24px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .mkdf-title {
+        font-size: 1.3em;
+    }
+    
+    .section-icon {
+        font-size: 1.6em;
+    }
+    
+    .mkdf-info-box {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .mkdf-info-icon {
+        font-size: 2.2em;
+    }
+    
+    .mkdf-field input,
+    .mkdf-field select,
+    .mkdf-field textarea {
+        padding: 12px 14px;
+    }
+    
+    .mkdf-submit-btn {
+        padding: 14px 24px;
+        font-size: 1em;
+    }
+}

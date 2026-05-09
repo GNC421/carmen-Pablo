@@ -1,0 +1,67 @@
+/* ========================================
+   RADIO BUTTONS PERSONALIZADOS
+   ======================================== */
+
+.mkdf-radio-group {
+    margin-bottom: 28px;
+}
+
+.mkdf-radio-label {
+    display: block;
+    font-size: 0.85em;
+    font-weight: 600;
+    margin-bottom: 14px;
+    letter-spacing: 0.3px;
+}
+
+.mkdf-radio-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.mkdf-radio {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    font-size: 0.95em;
+    transition: all 0.2s ease;
+    padding: 6px 0;
+}
+
+.mkdf-radio:hover {
+    transform: translateX(4px);
+}
+
+.mkdf-radio input {
+    display: none;
+}
+
+.mkdf-radio-check {
+    width: 22px;
+    height: 22px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    transition: all 0.25s ease;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.mkdf-radio input:checked + .mkdf-radio-check {
+    background: white;
+    box-shadow: inset 0 0 0 5px #3b82f6;
+}
+
+.mkdf-radio input:checked + .mkdf-radio-check::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    background: #3b82f6;
+    border-radius: 50%;
+}

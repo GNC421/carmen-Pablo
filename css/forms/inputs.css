@@ -1,0 +1,77 @@
+/* ========================================
+   CAMPOS DE FORMULARIO
+   ======================================== */
+
+.mkdf-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.mkdf-form-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.mkdf-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.mkdf-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.mkdf-field label {
+    font-size: 0.85em;
+    font-weight: 600;
+    opacity: 0.9;
+    letter-spacing: 0.3px;
+}
+
+.required {
+    color: #fca5a5;
+}
+
+.mkdf-field input,
+.mkdf-field select,
+.mkdf-field textarea {
+    padding: 14px 18px;
+    background: rgba(255, 255, 255, 0.95);
+    border: none;
+    border-radius: 16px;
+    font-size: 0.95em;
+    font-family: inherit;
+    transition: all 0.25s ease;
+    color: #1e293b;
+}
+
+.mkdf-field input:hover,
+.mkdf-field select:hover,
+.mkdf-field textarea:hover {
+    background: white;
+}
+
+.mkdf-field input:focus,
+.mkdf-field select:focus,
+.mkdf-field textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.3);
+    background: white;
+    transform: scale(1.01);
+}
+
+.mkdf-field textarea {
+    resize: vertical;
+    min-height: 110px;
+}
+
+.field-hint {
+    font-size: 0.7em;
+    opacity: 0.7;
+    margin-top: 4px;
+}

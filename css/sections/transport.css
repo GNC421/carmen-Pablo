@@ -1,0 +1,25 @@
+/* ========================================
+   SECCIÓN TRANSPORTE - AZUL MEDIO
+   ======================================== */
+
+.mkdf-row-transport {
+    background: linear-gradient(135deg, #0369a1 0%, #075985 100%);
+    color: white;
+    border-bottom: 4px solid #8b5cf6;
+}
+
+.mkdf-row-transport .mkdf-section-header {
+    border-left: 4px solid #8b5cf6;
+    padding-left: 20px;
+}
+
+.mkdf-row-transport .mkdf-info-box {
+    background: rgba(139, 92, 246, 0.15);
+    border-left: 4px solid #8b5cf6;
+}
+
+.mkdf-image-transport {
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://www.artistealo.com/media/subcategory/images/autobus_y_minibus.webp?w=800&h=500&fit=crop');
+    background-size: cover;
+    background-position: center;
+}

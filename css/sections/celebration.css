@@ -1,0 +1,25 @@
+/* ========================================
+   SECCIÓN CELEBRACIÓN - AZUL VIVO
+   ======================================== */
+
+.mkdf-row-celebration {
+    background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+    color: white;
+    border-bottom: 4px solid #f59e0b;
+}
+
+.mkdf-row-celebration .mkdf-section-header {
+    border-left: 4px solid #f59e0b;
+    padding-left: 20px;
+}
+
+.mkdf-row-celebration .mkdf-info-box {
+    background: rgba(245, 158, 11, 0.15);
+    border-left: 4px solid #f59e0b;
+}
+
+.mkdf-image-celebration {
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1519741497674-611481863552?w=800&h=500&fit=crop');
+    background-size: cover;
+    background-position: center;
+}

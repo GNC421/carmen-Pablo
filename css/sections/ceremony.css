@@ -1,0 +1,25 @@
+/* ========================================
+   SECCIÓN CEREMONIA - AZUL OSCURO
+   ======================================== */
+
+.mkdf-row-ceremony {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: white;
+    border-bottom: 4px solid #3b82f6;
+}
+
+.mkdf-row-ceremony .mkdf-section-header {
+    border-left: 4px solid #3b82f6;
+    padding-left: 20px;
+}
+
+.mkdf-row-ceremony .mkdf-info-box {
+    background: rgba(59, 130, 246, 0.15);
+    border-left: 4px solid #3b82f6;
+}
+
+.mkdf-image-ceremony {
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://blanca.es/nuevaweb/wp-content/uploads/2020/09/Iglesia.jpg?w=800&h=500&fit=crop');
+    background-size: cover;
+    background-position: center 30%;
+}

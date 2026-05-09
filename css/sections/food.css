@@ -1,0 +1,25 @@
+/* ========================================
+   SECCIÓN ALIMENTACIÓN - AZUL TURQUESA
+   ======================================== */
+
+.mkdf-row-food {
+    background: linear-gradient(135deg, #0e7490 0%, #155e75 100%);
+    color: white;
+    border-bottom: 4px solid #10b981;
+}
+
+.mkdf-row-food .mkdf-section-header {
+    border-left: 4px solid #10b981;
+    padding-left: 20px;
+}
+
+.mkdf-row-food .mkdf-info-box {
+    background: rgba(16, 185, 129, 0.15);
+    border-left: 4px solid #10b981;
+}
+
+.mkdf-image-food {
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://www.magnagarden.es//images/fullsizeoutput_132.jpeg?w=800&h=500&fit=crop');
+    background-size: cover;
+    background-position: center;
+}
