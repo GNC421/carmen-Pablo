@@ -9,41 +9,21 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Pantalla de carga inicial -->
-    <div class="loading-screen" id="loadingScreen">
-        <div class="loader">
-            <div class="ring"></div>
-            <div class="ring"></div>
-            <div class="ring"></div>
-            <span>Cargando...</span>
-        </div>
-    </div>
 
-    <!-- Animación del sobre -->
-    <div class="invitation-stage" id="invitationStage">
-        <div class="envelope-wrapper" id="envelopeWrapper">
-            <div class="envelope">
-                <div class="envelope-flap"></div>
-                <div class="envelope-body">
-                    <!-- Líneas decorativas del sobre -->
-                    <div class="envelope-lines">
-                        <div class="line-left"></div>
-                        <div class="line-right"></div>
-                    </div>
-                    <!-- Sello de correo -->
-                    <div class="envelope-stamp">
-                        <span>✉️</span>
-                        <span>CORREOS</span>
-                    </div>
-                    <!-- Dirección -->
-                    <div class="envelope-address">
-                        <h3>Carmen & Pablo</h3>
-                        <p>Nos casamos</p>
-                    </div>
-                    <!-- Sello rojo -->
-                    <div class="envelope-seal"></div>
+    <!-- Pantalla de presentación con imagen de los novios -->
+    <div class="presentation-stage" id="presentationStage">
+        <div class="presentation-container">
+            <div class="couple-photo" id="couplePhoto">
+                <img src="images/1000092539.jpg" alt="Carmen y Pablo" id="coupleImage">
+                <div class="photo-overlay"></div>
+            </div>
+            <div class="presentation-message">
+                <h2>Carmen & Pablo</h2>
+                <div class="presentation-decoration"></div>
+                <p>Nos casamos</p>
+                <div class="click-hint">
+                    <span class="click-text">Haz clic para continuar con nosotros</span>
                 </div>
-                <button class="open-btn" id="openBtn">Abrir invitación</button>
             </div>
         </div>
     </div>
@@ -58,8 +38,7 @@
                 <div class="hero-decoration"></div>
                 <p class="hero-date">26 de septiembre de 2026</p>
                 <p class="hero-text">
-                    Somos Carmen y Pablo, y con este cuestionario nos vais a ayudar a que en septiembre todo
-                    salga perfecto como nuestro "sí, quiero". Gracias por echarnos una mano para que podamos
+                    Gracias por echarnos una mano para que podamos
                     disfrutar con vosotros de un día maravilloso, divertido y lleno de momentazos para recordar…
                     ¡y bailar hasta que nos duelan los pies!
                 </p>
@@ -171,6 +150,7 @@
                             </div>
                         </div>
                         <div class="mkdf-info-box">
+                            <div class="mkdf-info-icon">🥗</div>
                             <div>
                                 <h4>Menú especial</h4>
                                 <p>Si tienes alguna intolerancia alimentaria, este es el momento de confesarla sin miedo ni vergüenza.</p>
@@ -220,9 +200,10 @@
                             </div>
                         </div>
                         <div class="mkdf-info-box">
+                            <div class="mkdf-info-icon">🚍</div>
                             <div>
                                 <h4>Transporte gratuito</h4>
-                                <p>Queremos que solamente os preocupéis de disfrutar y pasar un día que recordéis siempre, así que para que nadie tenga que pensar en el coche ni en “¿quién conduce?”, tendréis servicio de autobuses en distintos momentos del día. Vosotros ponéis las ganas… ¡nosotros ponemos las ruedas La salida desde La Farola tendrá lugar a las 14:00</p>
+                                <p>Queremos que solamente os preocupéis de disfrutar y pasar un día que recordéis siempre, así que para que nadie tenga que pensar en el coche ni en "¿quién conduce?", tendréis servicio de autobuses en distintos momentos del día. Vosotros ponéis las ganas… ¡nosotros ponemos las ruedas! La salida desde La Farola tendrá lugar a las 14:00.</p>
                                 <a href="https://share.google/sEwCuu2mouiXkGmIl" target="_blank" class="mkdf-link">Ver punto de encuentro →</a>
                             </div>
                         </div>

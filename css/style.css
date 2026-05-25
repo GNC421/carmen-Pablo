@@ -3,30 +3,240 @@
    ======================================== */
 
 /* Base */
-@import url('base/reset.css');
-@import url('base/typography.css');
+@import url('base/naturaleza.css');
 
-/* Components */
-@import url('components/loading.css');
-@import url('components/envelope.css');
 
-/* Layout */
-@import url('layout/container.css');
-@import url('layout/hero.css');
-@import url('layout/rows.css');
+/* ========================================
+   PANTALLA DE PRESENTACIÓN - FULLSCREEN
+   ======================================== */
 
-/* Sections */
-@import url('sections/ceremony.css');
-@import url('sections/celebration.css');
-@import url('sections/food.css');
-@import url('sections/transport.css');
+.presentation-stage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.8s ease;
+}
 
-/* Forms */
-@import url('forms/inputs.css');
-@import url('forms/radios.css');
-@import url('forms/checkboxes.css');
+.presentation-stage.hide {
+    opacity: 0;
+    pointer-events: none;
+}
 
-/* Utils */
-@import url('utils/buttons.css');
-@import url('utils/responsive.css');
-@import url('utils/animations.css');
+.presentation-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+/* Imagen de fondo a pantalla completa */
+.couple-photo {
+    display: flex;
+    justify-content: center;
+    top: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.couple-photo img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+    display: block;
+    border-radius: 10em;
+}
+
+.photo-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.3) 0%,
+        rgba(0, 0, 0, 0.5) 50%,
+        rgba(0, 0, 0, 0.7) 100%
+    );
+    transition: background 0.3s ease;
+}
+
+.couple-photo:hover .photo-overlay {
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.2) 0%,
+        rgba(0, 0, 0, 0.4) 50%,
+        rgba(0, 0, 0, 0.6) 100%
+    );
+}
+
+/* Texto superpuesto centrado */
+.presentation-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    width: 100%;
+    padding: 20px;
+    z-index: 10;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.presentation-message h2 {
+    font-family: 'Allura', cursive;
+    font-size: 5em;
+    font-weight: 400;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+.presentation-decoration {
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #4ade80, #86efac, transparent);
+    margin: 20px auto;
+    border-radius: 3px;
+}
+
+.presentation-message p {
+    font-size: 1.4em;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+
+.click-hint {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+    z-index: 10;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    animation: bounce 2s infinite;
+}
+
+.click-text {
+    display: block;
+    font-size: 0.9em;
+    opacity: 0.9;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.click-icon {
+    font-size: 1.5em;
+    display: inline-block;
+    animation: bounceIcon 1.5s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+}
+
+@keyframes bounceIcon {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -40%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+    .presentation-message h2 {
+        font-size: 3.5em;
+    }
+    
+    .presentation-decoration {
+        width: 70px;
+        margin: 15px auto;
+    }
+    
+    .presentation-message p {
+        font-size: 1.1em;
+        letter-spacing: 3px;
+        margin-bottom: 30px;
+    }
+    
+    .click-text {
+        font-size: 0.8em;
+    }
+    
+    .click-icon {
+        font-size: 1.2em;
+    }
+    
+    .click-hint {
+        bottom: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .presentation-message h2 {
+        font-size: 2.5em;
+    }
+    
+    .presentation-decoration {
+        width: 50px;
+        margin: 10px auto;
+    }
+    
+    .presentation-message p {
+        font-size: 0.9em;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+    }
+    
+    .click-text {
+        font-size: 0.7em;
+    }
+    
+    .click-icon {
+        font-size: 1em;
+    }
+    
+    .click-hint {
+        bottom: 20px;
+    }
+}
+
+/* Para pantallas muy altas */
+@media (min-height: 900px) {
+    .presentation-message h2 {
+        font-size: 6em;
+    }
+    
+    .presentation-message p {
+        font-size: 1.6em;
+        margin-bottom: 50px;
+    }
+}

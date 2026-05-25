@@ -1,13 +1,10 @@
 // ========================================
-// ANIMACIÓN DEL SOBRE - SIN POP UP
+// PANTALLA DE PRESENTACIÓN - FOTO NOVIOS
 // ========================================
 
 document.addEventListener('DOMContentLoaded', function() {
     const loadingScreen = document.getElementById('loadingScreen');
-    const invitationStage = document.getElementById('invitationStage');
-    const envelopeWrapper = document.getElementById('envelopeWrapper');
-    const envelope = document.querySelector('.envelope');
-    const openBtn = document.getElementById('openBtn');
+    const presentationStage = document.getElementById('presentationStage');
     const mainContent = document.getElementById('mainContent');
 
     // Ocultar pantalla de carga después de 1.5 segundos
@@ -20,49 +17,27 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }, 1500);
 
-    // Función para abrir el sobre y mostrar el cuestionario directamente
-    function openEnvelope() {
-        // Abrir la solapa del sobre
-        envelope.classList.add('open');
-        
-        // Después de la animación de apertura, mostrar el cuestionario
-        setTimeout(function() {
-            // Ocultar el sobre con fade-out
-            envelopeWrapper.classList.add('fade-out');
-            
-            // Mostrar el contenido principal
-            mainContent.classList.add('visible');
-            
-            // Ocultar el stage del sobre
-            invitationStage.classList.add('hide');
-            
-            // Eliminar el stage después de la transición
+    // Función para avanzar al contenido principal
+    function goToMainContent() {
+        if (presentationStage) {
+            presentationStage.classList.add('hide');
+            if (mainContent) mainContent.classList.add('visible');
             setTimeout(function() {
-                invitationStage.style.display = 'none';
+                if (presentationStage) presentationStage.style.display = 'none';
             }, 800);
-        }, 500); // Esperar a que la solapa se abra
+        }
     }
 
-    // Evento del botón "Abrir invitación"
-    if (openBtn) {
-        openBtn.addEventListener('click', function(e) {
-            e.stopPropagation();
-            openEnvelope();
-        });
-    }
-
-    // También se puede abrir haciendo clic en el sobre
-    if (envelope) {
-        envelope.addEventListener('click', function(e) {
-            if (e.target !== openBtn && !envelope.classList.contains('open')) {
-                openEnvelope();
-            }
+    // Al hacer clic en cualquier lugar de la pantalla de presentación
+    if (presentationStage) {
+        presentationStage.addEventListener('click', function(e) {
+            goToMainContent();
         });
     }
 });
 
 // ========================================
-// RESTO DEL CÓDIGO DEL FORMULARIO
+// VALIDACIÓN Y ENVÍO DEL FORMULARIO
 // ========================================
 
 // Validación personalizada
