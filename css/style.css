@@ -99,14 +99,6 @@
     letter-spacing: 2px;
 }
 
-.presentation-decoration {
-    width: 100px;
-    height: 3px;
-    background: linear-gradient(90deg, transparent, #4ade80, #86efac, transparent);
-    margin: 20px auto;
-    border-radius: 3px;
-}
-
 .presentation-message p {
     font-size: 1.4em;
     letter-spacing: 4px;
@@ -116,7 +108,7 @@
 }
 
 .click-hint {
-    position: absolute;
+    position: relative;
     bottom: 40px;
     left: 50%;
     transform: translateX(-50%);
@@ -176,11 +168,6 @@
         font-size: 3.5em;
     }
     
-    .presentation-decoration {
-        width: 70px;
-        margin: 15px auto;
-    }
-    
     .presentation-message p {
         font-size: 1.1em;
         letter-spacing: 3px;
@@ -203,11 +190,6 @@
 @media (max-width: 480px) {
     .presentation-message h2 {
         font-size: 2.5em;
-    }
-    
-    .presentation-decoration {
-        width: 50px;
-        margin: 10px auto;
     }
     
     .presentation-message p {

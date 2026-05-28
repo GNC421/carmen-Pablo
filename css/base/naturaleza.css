@@ -178,31 +178,12 @@ body {
     letter-spacing: 2px;
 }
 
-.presentation-decoration {
-    width: 80px;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, #f5e0b0, #e8d4a0, transparent);
-    margin: 15px auto;
-}
-
 .presentation-message p {
     font-size: 1.2em;
     letter-spacing: 3px;
     text-transform: uppercase;
     font-weight: 500;
     margin-bottom: 30px;
-}
-
-.click-hint {
-    position: absolute;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    color: white;
-    z-index: 10;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
-    animation: bounce 2s infinite;
 }
 
 .click-text {
